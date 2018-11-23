@@ -4,7 +4,7 @@
 #
 Name     : perl-Crypt-URandom
 Version  : 0.36
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.36.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.36.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libc/libcrypt-urandom-perl/libcrypt-urandom-perl_0.36-1.debian.tar.xz
@@ -81,7 +81,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/Crypt/URandom.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Crypt/URandom.pm
 
 %files dev
 %defattr(-,root,root,-)
