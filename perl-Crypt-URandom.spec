@@ -4,11 +4,11 @@
 #
 Name     : perl-Crypt-URandom
 Version  : 0.36
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.36.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.36.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libc/libcrypt-urandom-perl/libcrypt-urandom-perl_0.36-1.debian.tar.xz
-Summary  : 'Provide non blocking randomness'
+Summary  : Provide non blocking randomness
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-Crypt-URandom-license = %{version}-%{release}
@@ -25,6 +25,7 @@ and versions of Windows greater than or equal to Windows 2000.
 Summary: dev components for the perl-Crypt-URandom package.
 Group: Development
 Provides: perl-Crypt-URandom-devel = %{version}-%{release}
+Requires: perl-Crypt-URandom = %{version}-%{release}
 
 %description dev
 dev components for the perl-Crypt-URandom package.
@@ -43,7 +44,7 @@ license components for the perl-Crypt-URandom package.
 cd ..
 %setup -q -T -D -n Crypt-URandom-0.36 -b 1
 mkdir -p deblicense/
-mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/Crypt-URandom-0.36/deblicense/
+cp -r %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/Crypt-URandom-0.36/deblicense/
 
 %build
 export http_proxy=http://127.0.0.1:9/
