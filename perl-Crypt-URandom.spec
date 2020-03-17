@@ -4,7 +4,7 @@
 #
 Name     : perl-Crypt-URandom
 Version  : 0.36
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.36.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.36.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libc/libcrypt-urandom-perl/libcrypt-urandom-perl_0.36-1.debian.tar.xz
@@ -80,7 +80,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Crypt-URandom
-cp %{_builddir}/Crypt-URandom-0.36/deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-Crypt-URandom/d3ce19637abaf0ec89a77868c508ea1d5169dd92
+cp %{_builddir}/debian/copyright %{buildroot}/usr/share/package-licenses/perl-Crypt-URandom/d3ce19637abaf0ec89a77868c508ea1d5169dd92
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -104,4 +104,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Crypt/URandom.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Crypt/URandom.pm
