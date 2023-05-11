@@ -4,10 +4,10 @@
 # Using build pattern: cpan
 #
 Name     : perl-Crypt-URandom
-Version  : 0.37
-Release  : 24
-URL      : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.37.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.37.tar.gz
+Version  : 0.38
+Release  : 25
+URL      : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.38.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.38.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libc/libcrypt-urandom-perl/libcrypt-urandom-perl_0.36-1.debian.tar.xz
 Summary  : 'Provide non blocking randomness'
 Group    : Development/Tools
@@ -23,7 +23,7 @@ BuildRequires : buildreq-cpan
 NAME
 Crypt::URandom - Provide non blocking randomness
 VERSION
-This document describes Crypt::URandom version 0.37
+This document describes Crypt::URandom version 0.38
 
 %package dev
 Summary: dev components for the perl-Crypt-URandom package.
@@ -53,14 +53,14 @@ perl components for the perl-Crypt-URandom package.
 
 
 %prep
-%setup -q -n Crypt-URandom-0.37
+%setup -q -n Crypt-URandom-0.38
 cd %{_builddir}
 tar xf %{_sourcedir}/libcrypt-urandom-perl_0.36-1.debian.tar.xz
-cd %{_builddir}/Crypt-URandom-0.37
+cd %{_builddir}/Crypt-URandom-0.38
 mkdir -p deblicense/
-cp -r %{_builddir}/debian/* %{_builddir}/Crypt-URandom-0.37/deblicense/
+cp -r %{_builddir}/debian/* %{_builddir}/Crypt-URandom-0.38/deblicense/
 pushd ..
-cp -a Crypt-URandom-0.37 buildavx2
+cp -a Crypt-URandom-0.38 buildavx2
 popd
 
 %build
