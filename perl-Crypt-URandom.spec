@@ -5,7 +5,7 @@
 #
 Name     : perl-Crypt-URandom
 Version  : 0.39
-Release  : 27
+Release  : 28
 URL      : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.39.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.39.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libc/libcrypt-urandom-perl/libcrypt-urandom-perl_0.36-1.debian.tar.xz
