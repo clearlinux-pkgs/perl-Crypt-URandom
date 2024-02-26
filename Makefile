@@ -1,5 +1,5 @@
 PKG_NAME := perl-Crypt-URandom
-URL = https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.39.tar.gz
-ARCHIVES = http://http.debian.net/debian/pool/main/libc/libcrypt-urandom-perl/libcrypt-urandom-perl_0.36-1.debian.tar.xz deblicense/
+URL = https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.40.tar.gz
+ARCHIVES = 
 
 include ../common/Makefile.common
