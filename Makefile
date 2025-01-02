@@ -1,5 +1,5 @@
 PKG_NAME := perl-Crypt-URandom
-URL = https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.40.tar.gz
+URL = https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.41.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
