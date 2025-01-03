@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : perl-Crypt-URandom
-Version  : 0.41
-Release  : 31
-URL      : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.41.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.41.tar.gz
+Version  : 0.43
+Release  : 32
+URL      : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.43.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.43.tar.gz
 Summary  : 'Provide non blocking randomness'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
@@ -24,7 +24,7 @@ BuildRequires : perl(Test::Pod)
 NAME
 Crypt::URandom - Provide non blocking randomness
 VERSION
-This document describes Crypt::URandom version 0.41
+This document describes Crypt::URandom version 0.43
 
 %package dev
 Summary: dev components for the perl-Crypt-URandom package.
@@ -46,10 +46,10 @@ perl components for the perl-Crypt-URandom package.
 
 
 %prep
-%setup -q -n Crypt-URandom-0.41
-cd %{_builddir}/Crypt-URandom-0.41
+%setup -q -n Crypt-URandom-0.43
+cd %{_builddir}/Crypt-URandom-0.43
 pushd ..
-cp -a Crypt-URandom-0.41 buildavx2
+cp -a Crypt-URandom-0.43 buildavx2
 popd
 
 %build
