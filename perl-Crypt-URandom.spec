@@ -6,13 +6,14 @@
 # autospec commit: f4a13a5
 #
 Name     : perl-Crypt-URandom
-Version  : 0.49
-Release  : 36
-URL      : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.49.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.49.tar.gz
+Version  : 0.50
+Release  : 37
+URL      : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.50.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.50.tar.gz
 Summary  : 'Provide non blocking randomness'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0-Perl GPL-1.0
+Requires: perl-Crypt-URandom-license = %{version}-%{release}
 Requires: perl-Crypt-URandom-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Test::Pod)
@@ -24,7 +25,7 @@ BuildRequires : perl(Test::Pod)
 NAME
 Crypt::URandom - Provide non blocking randomness
 VERSION
-This document describes Crypt::URandom version 0.49
+This document describes Crypt::URandom version 0.50
 
 %package dev
 Summary: dev components for the perl-Crypt-URandom package.
@@ -34,6 +35,14 @@ Requires: perl-Crypt-URandom = %{version}-%{release}
 
 %description dev
 dev components for the perl-Crypt-URandom package.
+
+
+%package license
+Summary: license components for the perl-Crypt-URandom package.
+Group: Default
+
+%description license
+license components for the perl-Crypt-URandom package.
 
 
 %package perl
@@ -46,10 +55,10 @@ perl components for the perl-Crypt-URandom package.
 
 
 %prep
-%setup -q -n Crypt-URandom-0.49
-cd %{_builddir}/Crypt-URandom-0.49
+%setup -q -n Crypt-URandom-0.50
+cd %{_builddir}/Crypt-URandom-0.50
 pushd ..
-cp -a Crypt-URandom-0.49 buildavx2
+cp -a Crypt-URandom-0.50 buildavx2
 popd
 
 %build
@@ -74,6 +83,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Crypt-URandom
+cp %{_builddir}/Crypt-URandom-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/perl-Crypt-URandom/787a87f037ef8a1bd3555f7f092c4516d47e7170 || :
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -91,6 +102,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Crypt::URandom.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Crypt-URandom/787a87f037ef8a1bd3555f7f092c4516d47e7170
 
 %files perl
 %defattr(-,root,root,-)
