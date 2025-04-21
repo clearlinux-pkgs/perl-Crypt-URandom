@@ -7,7 +7,7 @@
 #
 Name     : perl-Crypt-URandom
 Version  : 0.54
-Release  : 45
+Release  : 46
 URL      : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.54.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DD/DDICK/Crypt-URandom-0.54.tar.gz
 Summary  : 'Provide non blocking randomness'
